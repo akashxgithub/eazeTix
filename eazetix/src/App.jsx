@@ -1,15 +1,16 @@
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import MovieDetails from './pages/MovieDetails';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import MovieDetails from './MovieDetails';
 
 const App = () => {
   return (
-    <div className="font-sans">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
       </Routes>
-    </div>
+    </Router>
   );
 };
 
